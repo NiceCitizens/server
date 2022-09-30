@@ -21,10 +21,10 @@ import java.util.List;
 @RequiredArgsConstructor
 @Component
 public class JwtTokenProvider {
-//    @Value("jwt.secret")
-    private String secretKey="key";
-//    @Value("jwt.time")
-    private long tokenValidTime=30 * 60 * 1000L;
+    @Value("${jwt.secret}")
+    private String secretKey;
+    @Value("${jwt.time}")
+    private long tokenValidTime;
     private final UserDetailsService userDetailsService;
 
     @PostConstruct
