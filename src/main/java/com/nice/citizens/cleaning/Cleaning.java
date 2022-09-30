@@ -1,8 +1,8 @@
-package com.nice.citizens.entity;
+package com.nice.citizens.cleaning;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import com.nice.citizens.citizen.Citizen;
+import com.nice.citizens.cleaning_citizen.CleaningCitizen;
+import lombok.*;
 import org.springframework.data.geo.Point;
 
 import javax.persistence.*;
@@ -13,8 +13,10 @@ import java.util.List;
 @Entity
 @Table
 @Getter
-//@Builder
+@Setter
+@Builder
 @NoArgsConstructor
+@AllArgsConstructor
 public class Cleaning {
     @Id
     @GeneratedValue
@@ -43,7 +45,13 @@ public class Cleaning {
     private Citizen register_citizen;
 
 //    작업 참석자
+
+    @Builder.Default
     @OneToMany(mappedBy = "cleaning")
     private List<CleaningCitizen> attemptCitizens = new ArrayList<>();
 
+    @Builder
+    public Cleaning(int point){
+        this.point = point;
+    }
 }

@@ -1,8 +1,9 @@
-package com.nice.citizens.entity;
+package com.nice.citizens.citizen;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import com.nice.citizens.cleaning_citizen.CleaningCitizen;
+import com.nice.citizens.jwt.User;
+import com.nice.citizens.region.Region;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -11,18 +12,13 @@ import java.util.List;
 @Entity
 @Table
 @Getter
-//@Builder
+@Setter
 @NoArgsConstructor
-public class Citizen {
+public class Citizen extends User {
     @Id
     @GeneratedValue
     @Column(name = "CITIZEN_ID")
     private Long Id;
-
-    private String name;
-
-//    enum으로 교체 예정
-    private String role;
 
     private int pointSum = 0;
 
@@ -34,4 +30,11 @@ public class Citizen {
 
 //    @OneToMany
 //    private List<Citizen> friends = new ArrayList<>();
+
+    @Builder
+    public Citizen(String email, String username, String password, String role, Region region) {
+        super(email, username, password, role);
+        this.region = region;
+    }
+
 }
