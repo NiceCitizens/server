@@ -1,4 +1,4 @@
-package com.nice.citizens.entity;
+package com.nice.citizens.trash;
 
 import lombok.Builder;
 import lombok.Getter;

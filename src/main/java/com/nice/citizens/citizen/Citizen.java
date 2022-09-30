@@ -1,5 +1,6 @@
-package com.nice.citizens.entity;
+package com.nice.citizens.citizen;
 
+import com.nice.citizens.cleaning_citizen.CleaningCitizen;
 import com.nice.citizens.jwt.User;
 import com.nice.citizens.region.Region;
 import lombok.*;

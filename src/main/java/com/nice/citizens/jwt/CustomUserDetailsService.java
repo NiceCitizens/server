@@ -1,6 +1,6 @@
 package com.nice.citizens.jwt;
 
-import com.nice.citizens.repository.CitizenRepository;
+import com.nice.citizens.citizen.CitizenRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

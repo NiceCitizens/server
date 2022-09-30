@@ -1,5 +1,7 @@
-package com.nice.citizens.entity;
+package com.nice.citizens.cleaning_citizen;
 
+import com.nice.citizens.citizen.Citizen;
+import com.nice.citizens.cleaning.Cleaning;
 import lombok.Setter;
 
 import javax.persistence.*;

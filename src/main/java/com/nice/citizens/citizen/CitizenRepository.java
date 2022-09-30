@@ -1,6 +1,6 @@
-package com.nice.citizens.repository;
+package com.nice.citizens.citizen;
 
-import com.nice.citizens.entity.Citizen;
+import com.nice.citizens.citizen.Citizen;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

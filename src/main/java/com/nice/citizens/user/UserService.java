@@ -1,10 +1,9 @@
 package com.nice.citizens.user;
 
-import com.nice.citizens.entity.Citizen;
-import com.nice.citizens.jwt.User;
+import com.nice.citizens.citizen.Citizen;
 import com.nice.citizens.region.Region;
 import com.nice.citizens.region.RegionRepository;
-import com.nice.citizens.repository.CitizenRepository;
+import com.nice.citizens.citizen.CitizenRepository;
 import com.nice.citizens.user.dto.SignupDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

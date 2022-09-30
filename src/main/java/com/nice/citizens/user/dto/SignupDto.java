@@ -1,12 +1,9 @@
 package com.nice.citizens.user.dto;
 
-import com.nice.citizens.entity.Citizen;
+import com.nice.citizens.citizen.Citizen;
 import com.nice.citizens.region.Region;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Getter
 @Setter

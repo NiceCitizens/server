@@ -1,5 +1,7 @@
-package com.nice.citizens.entity;
+package com.nice.citizens.cleaning;
 
+import com.nice.citizens.citizen.Citizen;
+import com.nice.citizens.cleaning_citizen.CleaningCitizen;
 import lombok.*;
 import org.springframework.data.geo.Point;
 

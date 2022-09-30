@@ -1,6 +1,6 @@
-package com.nice.citizens.repository;
+package com.nice.citizens.cleaning;
 
-import com.nice.citizens.entity.Cleaning;
+import com.nice.citizens.cleaning.Cleaning;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
