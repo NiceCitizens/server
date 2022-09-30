@@ -16,7 +16,8 @@ public class Region {
     @GeneratedValue
     @Column(name="REGION_ID")
     private Long Id;
-    private String regionName;
+    @Enumerated(EnumType.STRING)
+    private RegionName regionName;
     private int pointSumRegion = 0;
 
 }

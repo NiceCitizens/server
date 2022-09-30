@@ -2,6 +2,7 @@ package com.nice.citizens.user.dto;
 
 import com.nice.citizens.citizen.Citizen;
 import com.nice.citizens.region.Region;
+import com.nice.citizens.region.RegionName;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,7 +12,7 @@ public class SignupDto {
     private String email;
     private String username;
     private String password;
-    private String regionName;
+    private RegionName regionName;
 
     public Citizen toEntity(Region region) {
         return Citizen.builder()

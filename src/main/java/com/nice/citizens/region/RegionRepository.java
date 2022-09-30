@@ -7,5 +7,5 @@ import java.util.Optional;
 
 @Repository
 public interface RegionRepository extends JpaRepository<Region,Long> {
-    Optional<Region> findByRegionName(String name);
+    Optional<Region> findByRegionName(RegionName name);
 }
