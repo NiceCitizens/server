@@ -32,10 +32,10 @@ public class Citizen extends User {
 //    @OneToMany
 //    private List<Citizen> friends = new ArrayList<>();
 
-    public Citizen(String username, String password, List<String> roles, int pointSum, Region region) {
-        super(username, password, roles);
+    public Citizen(String email, String username, String password, List<String> roles, int pointSum, Region region, List<CleaningCitizen> cleaningHistory) {
+        super(email, username, password, roles);
         this.pointSum = pointSum;
         this.region = region;
+        this.cleaningHistory = cleaningHistory;
     }
-
 }

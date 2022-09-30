@@ -15,15 +15,21 @@ import java.util.stream.Collectors;
 @NoArgsConstructor
 @RequiredArgsConstructor
 public class User implements UserDetails {
+    private String email;
     private String username;
     private String password;
 
     private List<String> roles = new ArrayList<>();
 
-    public User(String username, String password, List<String> roles) {
+    public User(String email, String username, String password, List<String> roles) {
+        this.email = email;
         this.username = username;
         this.password = password;
         this.roles = roles;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     @Override
