@@ -16,5 +16,6 @@ public enum RegionName {
     JEONNAM,
     KYEONGBOOK,
     KYEONGNAM,
-    JEJU;
+    JEJU,
+    SEJONG;
 }
