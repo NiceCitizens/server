@@ -1,28 +1,25 @@
 package com.nice.citizens.entity;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import com.nice.citizens.jwt.User;
+import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Entity
 @Table
 @Getter
-//@Builder
+@Setter
+@Builder
 @NoArgsConstructor
-public class Citizen {
+public class Citizen extends User {
     @Id
     @GeneratedValue
     @Column(name = "CITIZEN_ID")
     private Long Id;
-
-    private String name;
-
-//    enum으로 교체 예정
-    private String role;
 
     private int pointSum = 0;
 
@@ -34,4 +31,11 @@ public class Citizen {
 
 //    @OneToMany
 //    private List<Citizen> friends = new ArrayList<>();
+
+    public Citizen(String username, String password, List<String> roles, int pointSum, Region region) {
+        super(username, password, roles);
+        this.pointSum = pointSum;
+        this.region = region;
+    }
+
 }
