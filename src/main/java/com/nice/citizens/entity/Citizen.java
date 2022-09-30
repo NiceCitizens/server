@@ -1,19 +1,17 @@
 package com.nice.citizens.entity;
 
 import com.nice.citizens.jwt.User;
+import com.nice.citizens.region.Region;
 import lombok.*;
-import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @Entity
 @Table
 @Getter
 @Setter
-@Builder
 @NoArgsConstructor
 public class Citizen extends User {
     @Id
@@ -32,10 +30,10 @@ public class Citizen extends User {
 //    @OneToMany
 //    private List<Citizen> friends = new ArrayList<>();
 
-    public Citizen(String email, String username, String password, List<String> roles, int pointSum, Region region, List<CleaningCitizen> cleaningHistory) {
-        super(email, username, password, roles);
-        this.pointSum = pointSum;
+    @Builder
+    public Citizen(String email, String username, String password, String role, Region region) {
+        super(email, username, password, role);
         this.region = region;
-        this.cleaningHistory = cleaningHistory;
     }
+
 }

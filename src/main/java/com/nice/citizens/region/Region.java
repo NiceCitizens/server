@@ -1,4 +1,4 @@
-package com.nice.citizens.entity;
+package com.nice.citizens.region;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -16,7 +16,7 @@ public class Region {
     @GeneratedValue
     @Column(name="REGION_ID")
     private Long Id;
-
+    private String regionName;
     private int pointSumRegion = 0;
 
 }
