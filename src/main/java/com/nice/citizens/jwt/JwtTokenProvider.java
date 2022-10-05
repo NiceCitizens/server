@@ -21,10 +21,10 @@ import java.util.List;
 @RequiredArgsConstructor
 @Component
 public class JwtTokenProvider {
-//    @Value("jwt.secret")
-    private String secretKey="key";
-//    @Value("jwt.time")
-    private long tokenValidTime=30 * 60 * 1000L;
+    @Value("${jwt.secret}")
+    private String secretKey;
+    @Value("${jwt.time}")
+    private long tokenValidTime;
     private final UserDetailsService userDetailsService;
 
     @PostConstruct
@@ -44,7 +44,7 @@ public class JwtTokenProvider {
                 .compact();
     }
 
-    public Authentication authentication(String token) {
+    public Authentication getAuthentication(String token) {
         UserDetails userDetails = userDetailsService.loadUserByUsername(this.getUserPk(token));
         return new UsernamePasswordAuthenticationToken(userDetails, "", userDetails.getAuthorities());
     }
@@ -62,7 +62,7 @@ public class JwtTokenProvider {
             Jws<Claims> claims = Jwts.parser().setSigningKey(secretKey).parseClaimsJws(jwtToken);
             return !claims.getBody().getExpiration().before(new Date());
         } catch (Exception e) {
-            return false;
+            return false; // 예외처리 예정
         }
     }
 
