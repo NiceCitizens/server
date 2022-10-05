@@ -1,7 +1,6 @@
 package com.nice.citizens.user;
 
 import com.nice.citizens.citizen.Citizen;
-import com.nice.citizens.jwt.JwtTokenProvider;
 import com.nice.citizens.jwt.User;
 import com.nice.citizens.user.dto.LoginDto;
 import com.nice.citizens.user.dto.SignupDto;

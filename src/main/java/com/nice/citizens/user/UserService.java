@@ -1,6 +1,8 @@
 package com.nice.citizens.user;
 
 import com.nice.citizens.citizen.Citizen;
+import com.nice.citizens.error.CustomException;
+import com.nice.citizens.error.ErrorCode;
 import com.nice.citizens.jwt.JwtTokenProvider;
 import com.nice.citizens.region.Region;
 import com.nice.citizens.region.RegionRepository;
@@ -42,9 +44,9 @@ public class UserService {
     @Transactional
     public String citizenLogin(@RequestBody LoginDto loginDto) {
         Citizen citizen = citizenRepository.findByEmail(loginDto.getEmail())
-                .orElseThrow(() -> new IllegalArgumentException("등록되지 않은 id"));
+                .orElseThrow(() -> new CustomException(ErrorCode.NOT_EXIST_EMAIL));
         if (!passwordEncoder.matches(loginDto.getPassword(), citizen.getPassword())) {
-            throw new IllegalArgumentException("잘못된 password");
+            throw new CustomException(ErrorCode.NOT_CORRECT_PASSWORD);
         }
         List<String> roles = new ArrayList<>();
         roles.add("CITIZENS");
