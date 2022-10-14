@@ -3,11 +3,13 @@ package com.nice.citizens.user.dto;
 import com.nice.citizens.citizen.Citizen;
 import com.nice.citizens.region.Region;
 import com.nice.citizens.region.RegionName;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
 public class SignupDto {
     private String email;
     private String username;
