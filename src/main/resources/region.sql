@@ -1,0 +1,17 @@
+INSERT INTO region values (1,0,"SEOUL");
+INSERT INTO region values (2,0,"INCHEON");
+INSERT INTO region values (3,0,"BUSAN");
+INSERT INTO region values (4,0,"DAEJEON");
+INSERT INTO region values (5,0,"GWANGJU");
+INSERT INTO region values (6,0,"DAEGU");
+INSERT INTO region values (7,0,"ULSAN");
+INSERT INTO region values (8,0,"GYEONGI");
+INSERT INTO region values (9,0,"KANGWON");
+INSERT INTO region values (10,0,"CHUNGBOOK");
+INSERT INTO region values (11,0,"CHUNGNAM");
+INSERT INTO region values (12,0,"JEONBOOK");
+INSERT INTO region values (13,0,"JEONNAM");
+INSERT INTO region values (14,0,"KYEONGBOOK");
+INSERT INTO region values (15,0,"KYEONGNAM");
+INSERT INTO region values (16,0,"JEJU");
+INSERT INTO region values (17,0,"SEJONG");
